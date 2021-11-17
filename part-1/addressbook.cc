@@ -57,7 +57,7 @@ int main(int argc, char* argv[]) {
     // https://en.cppreference.com/w/cpp/container/vector/push_back
   }
   cout << "Let's sort your addressbook!\n";
-  sort(addressbook.begin(), addressbook.end(), 
+  sort(addressbook.begin(), addressbook.end(),
        [](Person& a, Person& b) { return a > b; });
   // Sort the address_book vector using sort().
   // https://en.cppreference.com/w/cpp/algorithm/sort
