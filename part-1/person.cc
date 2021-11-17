@@ -7,6 +7,7 @@
 // Lab 10-01
 //
 // This creates the class for people
+//
 #include "person.h"
 
 /// Person is a constructor which initializes a Person object
