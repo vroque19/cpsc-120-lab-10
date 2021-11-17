@@ -4,7 +4,7 @@
 // vroque19@csu.fullerton.edu
 // @vroque19
 //
-// Lab-10-01
+// Lab 10-01
 //
 // This creates the class for people
 #include "person.h"
@@ -24,7 +24,7 @@ Person::Person(std::string name, std::string phone_number) {
 /// The name of the person
 /// \returns the name of the person
 std::string Person::name() const {
-return name_;
+  return name_;
   // Implement the accessor (also known as a getter) for the name_ data
   // member.
 }
@@ -33,7 +33,7 @@ return name_;
 /// \returns the phone_number of the person
 
 std::string Person::phone_number() const {
-return phone_number_;
+  return phone_number_;
   // Implement the accessor (also known as a getter) for the phone_number_
   // data member.
 }
@@ -56,8 +56,8 @@ Person& Person::set_phone_number(const std::string& phone_number) {
 /// \remark Look at operator<< at the bottom - this method is called from
 /// within that function.
 std::ostream& Person::write(std::ostream& out) const {
-out << name_ << " " << phone_number_;
-return out;
+  out << name_ << " " << phone_number_;
+  return out;
   // Implement the write member function which sends to the out parameter
   // the name and the phone number with a space between the two data members.
   // Don't forget to return out.

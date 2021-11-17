@@ -4,10 +4,9 @@
 // vroque19@csu.fullerton.edu
 // @vroque19
 //
-// Lab-10-01
+// Lab 10-01
 //
 // This is an address book
-//
 #include <algorithm>
 #include <iostream>
 #include <string>
@@ -57,14 +56,13 @@ int main(int argc, char* argv[]) {
     // https://en.cppreference.com/w/cpp/container/vector/push_back
   }
   cout << "Let's sort your addressbook!\n";
-  sort(addressbook.begin(), addressbook.end(), [](Person& a, Person& b) {
-    return a > b;
-  });
+  sort(addressbook.begin(), addressbook.end(), 
+      [](Person& a, Person& b) { return a > b; });
   // Sort the address_book vector using sort().
   // https://en.cppreference.com/w/cpp/algorithm/sort
 
   cout << "Great! Let's print out all the enteries in your addressbook.\n";
-  for(auto person : addressbook){
+  for (auto person : addressbook) {
     cout << person << "\n";
   }
   // Using a range-for loop, print out each entry of the addressbook.
