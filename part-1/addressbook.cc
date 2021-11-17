@@ -1,4 +1,13 @@
-
+// Vanessa Roque
+// CPSC 120-19
+// 2021-11-09
+// vroque19@csu.fullerton.edu
+// @vroque19
+//
+// Lab-10-01
+//
+// This is an address book
+//
 #include <algorithm>
 #include <iostream>
 #include <string>
@@ -17,6 +26,9 @@ int main(int argc, char* argv[]) {
   /// The address book is C++ Vector object that contains Person objects.
   // TODO: declare a variable named addressbook which is a vector of
   // Person objects.
+  vector<AddressBook> address_book;
+  Person person;
+
 
   cout << "Let's add " << kEnteries << " to your address book!\n";
   for (int i = 0; i < kEnteries; i++) {

@@ -1,4 +1,12 @@
-
+// Vanessa Roque
+// CPSC 120-19
+// 2021-11-09
+// vroque19@csu.fullerton.edu
+// @vroque19
+//
+// Lab-10-01
+//
+// This creates the class for people
 #include "person.h"
 
 /// Person is a constructor which initializes a Person object
@@ -7,21 +15,26 @@
 /// \param phone_number A string which represents a telephone number like
 /// "657-278-3700"
 Person::Person(std::string name, std::string phone_number) {
-  // TODO: Implement the constructor. If you can't remember the names
+  name_ = name;
+  phone_number_ = phone_number;
+  // Implement the constructor. If you can't remember the names
   // of the data members look in the associated header file, person.h
 }
 
 /// The name of the person
 /// \returns the name of the person
 std::string Person::name() const {
-  // TODO: Implement the accessor (also known as a getter) for the name_ data
+return name_;
+  // Implement the accessor (also known as a getter) for the name_ data
   // member.
 }
 
 /// The phone_number of the person
 /// \returns the phone_number of the person
+
 std::string Person::phone_number() const {
-  // TODO: Implement the accessor (also known as a getter) for the phone_number_
+return phone_number_;
+  // Implement the accessor (also known as a getter) for the phone_number_
   // data member.
 }
 
@@ -31,7 +44,9 @@ std::string Person::phone_number() const {
 /// \remark The method returns the object itself so multiple methods
 /// can be chained together.
 Person& Person::set_phone_number(const std::string& phone_number) {
-  // TODO: Implement the mutator (also known as a setter) for the phone_number_
+  phone_number_ = phone_number;
+  return *this;
+  // Implement the mutator (also known as a setter) for the phone_number_
   // data member.
 }
 
@@ -41,7 +56,9 @@ Person& Person::set_phone_number(const std::string& phone_number) {
 /// \remark Look at operator<< at the bottom - this method is called from
 /// within that function.
 std::ostream& Person::write(std::ostream& out) const {
-  // TODO: Implement the write member function which sends to the out parameter
+out << name_ << " " << phone_number_;
+return out;
+  // Implement the write member function which sends to the out parameter
   // the name and the phone number with a space between the two data members.
   // Don't forget to return out.
 }
@@ -51,7 +68,8 @@ std::ostream& Person::write(std::ostream& out) const {
 /// \returns true when *this and person have the same name and phone
 /// number.
 bool Person::operator==(const Person& person) const {
-  // TODO: Implement an is equal to boolean operator which returns true when
+  return (name_ == person.name()) && (phone_number_ == person.phone_number());
+  // Implement an is equal to boolean operator which returns true when
   // this has the same name and phone number as the parameter person.
 }
 
@@ -67,7 +85,8 @@ bool Person::operator!=(const Person& person) const {
 /// \param person The operand to the right hand side of <
 /// \returns true when *this.name() < person.name()
 bool Person::operator<(const Person& person) const {
-  // TODO: Implement a less than boolean operator which returns true when this
+  return name_ < person.name();
+  // Implement a less than boolean operator which returns true when this
   // has a name that alphabetically comes before the name assciated with the
   // parameter person.
 }
@@ -76,7 +95,8 @@ bool Person::operator<(const Person& person) const {
 /// \param person The operand to the right hand side of >
 /// \returns true when *this.name() > person.name()
 bool Person::operator>(const Person& person) const {
-  // TODO: Implement a greater than boolean operator which returns true when
+  return name_ > person.name();
+  // Implement a greater than boolean operator which returns true when
   // this has a name that alphabetically comes after the name assciated with the
   // parameter person.
 }
