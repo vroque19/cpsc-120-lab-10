@@ -29,7 +29,7 @@ int main(int argc, char* argv[]) {
   vector<Person> addressbook;
 
 
-  cout << "Let's add 3 " << kEnteries << " to your address book!\n";
+  cout << "Let's add " << kEnteries << " to your address book!\n";
   for (int i = 0; i < kEnteries; i++) {
     cout << "Enter a name: ";
     string name;
